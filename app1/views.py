@@ -3,7 +3,8 @@ from django.shortcuts import render
 
 def homepage(request):
     return render(request, 'homepage.html')
-
+def myview(request):
+    return render(request, 'myapp/messaging.html')
 #@login_required
 def mainpage_view(request):
     return render(request, 'mainpage.html')
