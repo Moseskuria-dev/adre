@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <div class="register-container">
+        <form method="post" class="register-form">
+            {% csrf_token %}
+            <h2>Register</h2>
+            <div class="input-container">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+            <div class="input-container">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+            <div class="input-container">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+            </div>
+            <div class="input-container">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <a href="{% url 'login' %}" class="btn">Already have an account? Login</a>
+        </form>
+    </div>
+</body>
+</html>
