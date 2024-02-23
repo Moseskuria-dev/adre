@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def homepage(request):
     return render(request, 'homepage.html')
-def myview(request):
+def about(request):
     return render(request, 'myapp/about.html')
 #@login_required
 def mainpage_view(request):
