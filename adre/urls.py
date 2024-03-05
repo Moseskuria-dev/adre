@@ -21,7 +21,6 @@ from app1.views import mainpage_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include ('accounts.urls')),
-    path('', include ('app1.urls')),
+    path('', include ('app2.urls')),
     path('mainpage/', mainpage_view, name='mainpage'),
-    
 ]
